@@ -5,6 +5,10 @@ $pdo = new PDO('mysql:host=localhost;dbname=ruhusa;charset=utf8mb4', 'root', '',
   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 ]);
 
+// Kiungo cha logo. Weka hapa kiungo cha https:// cha logo yako ya mtandaoni (mfano Cloudflare R2).
+// Kikishindwa kupakia, mfumo unatumia nakala ya ndani assets/ocgs.png.
+define('LOGO_URL', 'https://pub-e96de2568ba648f7b2673b8b29eca88e.r2.dev/assets/ocgs.png');
+
 const HATUA = ['meneja'=>'Meneja', 'mkurugenzi'=>'Mkurugenzi', 'chief'=>'Mtakwimu Mkuu'];
 
 function e($s){ return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8'); }
